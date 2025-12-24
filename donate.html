@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enter Details</title>
+</head>
+<body>
+  <h2>Enter Name and ID</h2>
+
+  <form onsubmit="checkDetails(); return false;">
+    <label>Name:</label><br>
+    <input type="text" id="name" required><br><br>
+
+    <label>ID:</label><br>
+    <input type="text" id="id" required><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    function checkDetails() {
+      const correctName = "GIFT";              // Correct name
+      const correctID = "Arjuna's Gift";       // Correct ID
+
+      const name = document.getElementById("name").value;
+      const id = document.getElementById("id").value;
+
+      if (name === correctName && id === correctID) {
+        // CORRECT → open your desired link
+        window.location.href = "https://qr1.me-qr.com/data/image-pack/4db0Pwyw";
+      } else {
+        // WRONG → redirect to Red Cross page
+        window.location.href = "https://www.redcrossblood.org/donate-blood/blood-donation-process/donation-process-overview.html";
+      }
+    }
+  </script>
+</body>
+</html>
